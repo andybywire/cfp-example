@@ -1,0 +1,36 @@
+---
+layout: default
+---
+{{ content }}
+
+{% assign this-path = page.url | split:'/' %}
+{% assign category = this-path[1] | remove: ".html" %}
+
+{% case category %}
+  {% when 'catalogue' %}
+  	<ul>
+    	{% for item in site.data.catalogue %}
+        <li>
+          <a href="{{ item.item-name | datapage_url: '/catalogue' }}">{{ item.item-name }}</a>
+        </li>
+    	{% endfor %} 
+    </ul>
+  {% when 'directory' %}
+  	<ul>
+    	{% for person in site.data.directory %}
+        <li>
+          <a href="{{ person.last-name | datapage_url: '/directory' }}">{{ person.first-name }} {{ person.last-name }}</a>
+        </li>
+    	{% endfor %} 
+    </ul>
+  {% when 'events' %}
+  	<ul>
+    	{% for event in site.data.feed %}
+        <li>
+          <a href="{{ event.event-name | datapage_url: '/events' }}">{{ event.event-name }}</a>
+        </li>
+    	{% endfor %} 
+    </ul>
+  {% else %}
+     <p>Sorry, category not found</p>
+{% endcase %}
