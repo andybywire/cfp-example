@@ -32,8 +32,8 @@ markdown: kramdown
 
 # Page Generator settings
 page_gen:
-  - data: 'catalogue'
-    name: 'item-name'
+  - data: 'classes'
+    name: 'class-name'
     template: 'classes'
   - data: 'directory'
     name: 'last-name'

@@ -7,11 +7,11 @@ layout: default
 {% assign category = this-path[1] | remove: ".html" %}
 
 {% case category %}
-  {% when 'catalogue' %}
+  {% when 'classes' %}
   	<ul>
-    	{% for item in site.data.catalogue %}
+    	{% for item in site.data.classes %}
         <li>
-          <a href="{{ item.item-name | datapage_url: '/catalogue' }}">{{ item.item-name }}</a>
+          <a href="{{ item.class-name | datapage_url: '/classes' }}">{{ item.class-name }}</a>
         </li>
     	{% endfor %} 
     </ul>
