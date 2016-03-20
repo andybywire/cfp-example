@@ -34,7 +34,7 @@ markdown: kramdown
 page_gen:
   - data: 'catalogue'
     name: 'item-name'
-    template: 'page'
+    template: 'classes'
   - data: 'directory'
     name: 'last-name'
     template: 'page'
