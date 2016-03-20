@@ -1,7 +1,55 @@
 ---
 layout: default
 ---
+{% assign this-path = page.url | split:'/' %}
+{% assign category = this-path[1] %}
+
 <article>
+  {% if page.img %}
+    <img src="../img/{{ page.img }}">
+  {% endif %}
   <h1>{{ page.item-name }}{{ page.first-name}} {{ page.last-name}}{{ page.event-name}}</h1>
+  {% case category %}
+    {% when 'catalogue' %}  
+      <div class="class-info">    
+        <h2>Age {{ page.age }}</h2>
+        <h2>{{ page.days-1 }} {{ page.time-1 }}</h2>
+      </div>
+  {% endcase %}
   <p>{{ page.description }}{{ page.bio }}</p>
+
+  <div class="session-info">
+    <div class="row">
+      <div class="small-4 small-offset-1 columns">
+        <h6>Instructor: </h6>
+      </div>
+      <div class="small-7 columns">
+        <p>{{ page.instructor }}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-4 small-offset-1 columns">
+        <h6>Fees: </h6>
+      </div>
+      <div class="small-7 columns">
+        <p>${{ page.cost-1 }}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-4 small-offset-1 columns">
+        <h6>Sessions:</h6>
+      </div>
+      <div class="small-7 columns">
+        <p>{{ page.date-1 }}</p>
+        <p>{{ page.date-2 }}</p>
+        <p>{{ page.date-3 }}</p>
+        <p>{{ page.date-3 }}</p>
+      </div>
+    </div>
+  </div>
+
 </article>
+
+
