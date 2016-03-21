@@ -35,3 +35,41 @@ li.menu, li.label:first-child {
   margin-top: 1rem;
   margin-left: -1.25rem;
 }
+
+// Global styles
+// -------------
+
+h1 {
+  margin: 1rem 0 .5rem;
+}
+
+// Classes template styles
+// -----------------------
+
+.class-info {
+  h2 {
+    font-weight: 200;
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.session-info {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    h6 {
+        font-weight: 500;
+    }
+    p {
+        margin-bottom: 0rem;
+        font-weight: 300;
+    }
+}
+
+.cta .button {
+    line-height: .5;
+    min-width: 40%;
+    max-width: 45%;
+    margin-bottom: 3rem;
+}

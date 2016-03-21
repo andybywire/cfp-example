@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<article>
-  {% if page.img %}
-    <img src="../img/{{ page.img }}">
-  {% endif %}
+{% if page.img %}
+  <img src="../img/{{ page.img }}">
+{% endif %}
+<article class="row column">
   <h1>{{ page.class-name }}</h1> 
   <div class="class-info">    
     <h2>Age {{ page.age }}</h2>
