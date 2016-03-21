@@ -1,36 +1,16 @@
 ---
 layout: default
 ---
-{{ content }}
-
-{% assign this-path = page.url | split:'/' %}
-{% assign category = this-path[1] | remove: ".html" %}
-
-{% case category %}
-  {% when 'classes' %}
-  	<ul>
-    	{% for item in site.data.classes %}
-        <li>
-          <a href="{{ item.class-name | datapage_url: '/classes' }}">{{ item.class-name }}</a>
-        </li>
-    	{% endfor %} 
-    </ul>
-  {% when 'directory' %}
-  	<ul>
-    	{% for person in site.data.directory %}
-        <li>
-          <a href="{{ person.last-name | datapage_url: '/directory' }}">{{ person.first-name }} {{ person.last-name }}</a>
-        </li>
-    	{% endfor %} 
-    </ul>
-  {% when 'events' %}
-  	<ul>
-    	{% for event in site.data.feed %}
-        <li>
-          <a href="{{ event.event-name | datapage_url: '/events' }}">{{ event.event-name }}</a>
-        </li>
-    	{% endfor %} 
-    </ul>
-  {% else %}
-     <p>Sorry, category not found</p>
-{% endcase %}
+<section class="row column">
+  {% for class in site.data.classes %}
+    <a href="{{ class.class-name | datapage_url: '/classes' }}">
+        <div class="callout class-tile">
+        <div class="clearfix">
+            <h2 class="float-left">{{ class.class-name }}</h2>
+            <p class="float-right">Age {{ class.age }}</p>
+        </div>
+        <p>{{class.description | truncatewords: 18}}</p>
+        </div> 
+    </a>
+  {% endfor %}
+</section>
