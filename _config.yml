@@ -42,3 +42,6 @@ page_gen:
     name: 'event-name'
     template: 'page'
     dir: 'events'
+  - data: 'categories'
+    name: 'category'
+    template: 'category'

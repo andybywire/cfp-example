@@ -1,16 +1,34 @@
 ---
 layout: default
 ---
+{% if page.img %}
+    <img src="../img/{{ page.img }}">
+{% endif %}
+
 <section class="row column">
+  <h3>{{ page.category-label }}</h3>
+
   {% for class in site.data.classes %}
-    <a href="{{ class.class-name | datapage_url: '/classes' }}">
+    {% if page.category == class.category %}
+      <a href="{{ class.class-name | datapage_url: '/classes' }}">
         <div class="callout class-tile">
         <div class="clearfix">
-            <h2 class="float-left">{{ class.class-name }}</h2>
-            <p class="float-right">Age {{ class.age }}</p>
+          <h2 class="float-left">{{ class.class-name }}</h2>
+          <p class="float-right">Age {{ class.age }}</p>
         </div>
         <p>{{class.description | truncatewords: 18}}</p>
         </div> 
-    </a>
+      </a>
+    {% endif %}
   {% endfor %}
+
+  <h3>All Programs</h3>
+  {% for category in site.data.categories %}
+    <div class="category-nav {% if page.category == category.category %} active-category {% endif %}">
+      <a href="{{ category.category | datapage_url: '/categories' }}">
+        <h2>{{ category.category-label }}</h2>
+      </a>
+    </div>
+  {% endfor %}
+
 </section>
