@@ -23,12 +23,6 @@ layout: default
   {% endfor %}
 
   <h3>All Programs</h3>
-  {% for category in site.data.categories %}
-    <div class="category-nav {% if page.category == category.category %} active-category {% endif %}">
-      <a href="{{ category.category | datapage_url: '/categories' }}">
-        <h2>{{ category.category-label }}</h2>
-      </a>
-    </div>
-  {% endfor %}
+  {% include category-nav.html %}
 
 </section>
