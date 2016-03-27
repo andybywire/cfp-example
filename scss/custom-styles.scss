@@ -1,41 +1,3 @@
-// monochrome wireframe topbar styles
-// ----------------------------------
-
-.title-bar a, .top-bar, .top-bar ul, .top-bar a {
-  background-color: $primary-color;
-  color: $white;
-  .menu-text {
-      padding-left: 0;
-  }
-}
-
-.top-bar-left {
-  @include breakpoint(medium) {    //contains topbar items to page width on medium and up screens 
-    @include grid-row();
-    float: none;
-  }
-}
-
-.dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a::after {
-  border-color: $white transparent transparent;
-}
-
-li.menu-text {
-	display: none;
-	@include breakpoint(medium) {
-		display: table-cell;
-	}
-}
-
-ul {
-  //margin-left: 0;
-}
-
-li.menu, li.label:first-child {
-  margin-top: 1rem;
-  margin-left: -1.25rem;
-}
-
 // Global styles
 // -------------
 
@@ -54,6 +16,26 @@ h3 {
     margin-top: 1.5rem;
     font-size: .96875rem;
     font-weight: 500;
+  }
+}
+
+.title-bar {
+    line-height: 2;
+}
+
+.title-bar-title {
+    font-size: 1.2em;
+    font-weight: 400;
+    a {
+        color: inherit;
+    }
+}
+
+.title-bar a, .top-bar, .top-bar ul, .top-bar a {
+  background-color: $primary-color;
+  color: $white;
+  .menu-text {
+      padding-left: 0;
   }
 }
 
@@ -96,6 +78,32 @@ h3 {
         font-size: small;
     }
 }
+
+// Off-canvas nav styles
+// ---------------------
+
+.off-canvas-wrapper {
+    background-color: $light-gray;
+    }
+
+.off-canvas-wrapper-inner {
+    background-color: $white;
+}
+
+.off-canvas {
+    li {
+        height: 50px;
+    }
+    .sub-nav li {
+        padding-left: 1rem;
+    }
+    a.nav-header {
+        cursor: default;
+        font-size: .9rem;
+        font-weight: 700;
+    }
+}
+
 
 // Home page styles
 // ----------------

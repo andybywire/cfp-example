@@ -3,11 +3,41 @@
   {% include head.html %}
 <body>
 
-{% include global-nav.html %}
+<div class="off-canvas-wrapper">
+  <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
-{{ content }}  
+    <div class="title-bar">
+      <div class="title-bar-left">
+        <span class="title-bar-title"><a href="{{ site.baseurl }}">Greenlake Community Center</a></span>
+      </div>
+      <div class="title-bar-right">
+        <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
+      </div>
+    </div>
 
-{% include footer.html %}
+    <div class="off-canvas position-right" id="offCanvas" data-off-canvas data-position="right">
+      <ul class="vertical dropdown menu" data-dropdown-menu>
+        {% for nav in site.data.navigation %}
+          <li><a href="{{ nav.path }}" {% if nav.sub-nav == "true"%}class="nav-header"{% endif %}>{{ nav.label }}</a></li>
+          {% if nav.sub-nav == "true" %}
+            <ul class="sub-nav">
+              {% for category in site.data.categories %}
+                <li><a href="{{ category.category | datapage_url: '/categories' }}">
+                  {{ category.category-label }}</a>
+                </li>
+              {% endfor %}        
+            </ul>
+          {% endif %} 
+        {% endfor %}  
+      </ul>
+    </div>
+
+    {{ content }}  
+
+    {% include footer.html %}
+
+  </div>
+</div>
 
 <!-- core Foundation and jquery scripts -->
 <script src="/js/jquery.min.js"></script>
