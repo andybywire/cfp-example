@@ -7,20 +7,7 @@ layout: default
 
 <section class="row column">
   <h3>{{ page.category-label }}</h3>
-
-  {% for class in site.data.classes %}
-    {% if page.category == class.category %}
-      <a href="{{ class.class-name | datapage_url: '/classes' }}">
-        <div class="callout class-tile">
-        <div class="clearfix">
-          <h2 class="float-left">{{ class.class-name }}</h2>
-          <p class="float-right">Age {{ class.age }}</p>
-        </div>
-        <p>{{class.description | truncatewords: 18}}</p>
-        </div> 
-      </a>
-    {% endif %}
-  {% endfor %}
+  {% include class-list.html %}
 
   <h3>All Programs</h3>
   {% include category-nav.html %}

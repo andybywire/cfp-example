@@ -43,12 +43,85 @@ h1 {
   margin: 1rem 0 .5rem;
 }
 
+h3 {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-size: .96875rem;
+  font-weight: 500;
+  &.rule {
+    border-bottom: solid 1px $primary-color;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    font-size: .96875rem;
+    font-weight: 500;
+  }
+}
+
+.category-nav {
+  margin-bottom: 2rem;
+  h2 {
+    display: block;
+    background-color: $light-gray;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    &.active-category {
+    background-color: $dark-gray;
+    }
+  }
+  a {
+      color: $body-font-color;
+  }
+}
+
+// Home page styles
+// ----------------
+
+.hours-contact {
+  p {
+    margin-bottom: 0;
+  }
+  h6 {
+    margin-top: 1rem;
+    font-weight: 700;
+  }
+  ul {
+    list-style: none;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2.5rem;
+  max-width: 400px;
+  img {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
 // Class category page styles
 // --------------------------
+
+.class-list {
+  margin-bottom: 2rem;
+}
 
 .class-tile {
     border: solid 1px $primary-color;
     padding: .5rem;
+    h2 {
+      //font-size: 1.12rem;
+      font-weight: 500;
+    }
+    p {
+      line-height: 1.5rem;
+    }
+    .age {
+      font-weight: 300;
+      font-size: 1.15rem;
+    }
     * {
         margin-bottom: 0;
         color: $body-font-color;
