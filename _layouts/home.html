@@ -5,6 +5,31 @@ layout: default
 
 <div class="row">
   <div class="small-12 columns"> 
+
+    <div class="event-list">
+      <h3 class="rule">Events</h3>
+      {% for event in site.data.events %}
+        {% comment %} these assignments convert the date as a number so it can be compared: {% endcomment %}
+        {% assign site-generation = site.time | date: "%s" %}
+        {% assign event-date = event.date | date: "%s" %}
+        {% if event-date > site-generation and event.date != "ongoing" %}
+          <a href="{{ event.event-name | datapage_url: '/events' }}">
+            <div class="row small collapse">
+              <div class="event-date small-3 columns">
+                <h6>{{ event.date | date: "%a" }}</h6>
+                <h6>{{ event.date | date: "%b %d" }}</h6>
+                <h6>{{ event.time }}</h6>
+              </div>
+              <div class="event-summary small-9 columns">
+                <h3>{{ event.event-name }}</h3>
+                <p>{{ event.description | truncatewords: 10 }} {{ event.cost | capitalize }}</p>
+              </div>
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}        
+    </div>
+
     <h3 class="rule">Community Center Programs</h3>
     {% include category-nav.html %}
 

@@ -108,6 +108,34 @@ h3 {
 // Home page styles
 // ----------------
 
+.event-list h3 {
+  margin-top: 1.25rem;
+  margin-bottom: .75rem;
+}
+
+.event-date {
+  h6:first-child {
+    font-size: 1.2rem;
+  }
+  h6 {
+    margin-bottom: 0;
+    padding-left: .5rem;
+    font-weight: 300;
+  }
+}
+
+.event-summary {
+  h3 {
+    margin: 0;
+    text-transform: none;
+    font-size: 1.1875rem;
+    font-weight: 400;
+  }
+  p {
+    line-height: 1.4;
+  }
+}
+
 .hours-contact {
   p {
     margin-bottom: 0;
