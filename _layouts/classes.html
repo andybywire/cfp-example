@@ -52,6 +52,13 @@ layout: default
       </div>
   </div>
 
+  <h3>More Classes in this Age Group</h3>
+    {% for class in site.data.classes %}
+      {% if page.age-category == class.age-category and page.class-name != class.class-name %}
+        {% include class-tile.html %}
+      {% endif %} 
+    {% endfor %}
+
 </article>
 
 
