@@ -33,6 +33,33 @@ layout: default
     <h3 class="rule">Community Center Programs</h3>
     {% include category-nav.html %}
 
+    <div class="row">
+    {% for category in site.data.categories %}
+      {% if category.class == "supplemental" %}
+        {% if category.category == "teens" %}
+          <div class="small-12 columns">
+            <div class="supplemental-nav first">
+              <a href="{{ category.category | datapage_url: '/categories' }}">
+                <img src="/img/{{ category.img }}">
+                <h6>{{ category.category-label }}</h6>
+              </a>
+            </div>
+          </div>  
+        {% else %}
+          <div class="small-6 columns">
+            <div class="supplemental-nav">
+              <a href="{{ category.category | datapage_url: '/categories' }}">
+                <img src="/img/{{ category.img }}">
+                <h6>{{ category.category-label }}</h6>
+              </a>
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    </div>
+
+
     <div class="hours-contact">
       <h3 class="rule">Hours & Contact Information</h3>
 

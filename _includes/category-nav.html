@@ -1,7 +1,9 @@
 <div class="category-nav ">
   {% for category in site.data.categories %}
-    <a href="{{ category.category | datapage_url: '/categories' }}">
-      <h2 class="{% if page.category == category.category %}active-category{% endif %}">{{ category.category-label }}</h2>
-    </a>
+    {% if category.class == "main" %}
+      <a href="{{ category.category | datapage_url: '/categories' }}">
+        <h2 class="{% if page.category == category.category %}active-category{% endif %}">{{ category.category-label }}</h2>
+      </a>
+    {% endif %}
   {% endfor %}
 </div>

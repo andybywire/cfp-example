@@ -22,9 +22,11 @@
           {% if nav.sub-nav == "true" %}
             <ul class="sub-nav">
               {% for category in site.data.categories %}
-                <li><a href="{{ category.category | datapage_url: '/categories' }}">
-                  {{ category.category-label }}</a>
-                </li>
+                {% if category.class == "main" %}
+                  <li><a href="{{ category.category | datapage_url: '/categories' }}">
+                    {{ category.category-label }}</a>
+                  </li>
+                {% endif %}
               {% endfor %}        
             </ul>
           {% endif %} 

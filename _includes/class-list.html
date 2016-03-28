@@ -10,6 +10,16 @@
         <p>{{class.description | truncatewords: 18}}</p>
         </div> 
       </a>
+    {% elsif page.category == class.age-category %} 
+      <a href="{{ class.class-name | datapage_url: '/classes' }}">
+        <div class="callout class-tile">
+        <div class="clearfix">
+          <h2 class="float-left">{{ class.class-name }}</h2>
+          <p class="float-right age">Age {{ class.age }}</p>
+        </div>
+        <p>{{class.description | truncatewords: 18}}</p>
+        </div> 
+      </a>
     {% endif %}
   {% endfor %}
 </div>

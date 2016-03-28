@@ -136,6 +136,30 @@ h3 {
   }
 }
 
+.supplemental-nav {
+  position: relative;
+  margin-bottom: 1.5rem;
+  //margin-top: .25rem;
+  h6 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    color: $white;
+    font-weight: 500;
+    padding-left: .5rem;
+    margin-bottom: 0;
+    background-color: rgba( $primary-color, .7 );
+  }
+  &.first {
+    max-height: 100px;
+    overflow: hidden;
+    img {
+      margin-top: -3rem;
+    }
+  }
+}
+
 .hours-contact {
   p {
     margin-bottom: 0;
