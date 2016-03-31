@@ -113,14 +113,15 @@ $header-sizes: (
     'h5': 17,
     'h6': 16,
   ),
-  medium: (
+//  medium header responsive behavior disabled for the demo until tablet developemnt begins
+/*  medium: (   
     'h1': 48,
     'h2': 40,
     'h3': 31,
     'h4': 25,
     'h5': 20,
     'h6': 16,
-  ),
+  ),*/
 );
 $header-color: inherit;
 $header-lineheight: 1.4;
