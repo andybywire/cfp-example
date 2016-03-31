@@ -1,7 +1,10 @@
 ---
 layout: default
 ---
-<img src="../img/{{ page.img }}">
+<div class="mission">
+  <img src="../img/{{ page.img }}">
+  <h6>"Creating community through people, <br /> parks, and programs"</h6>
+</div>
 
 <div class="row">
   <div class="small-12 columns"> 
@@ -13,7 +16,7 @@ layout: default
         {% assign site-generation = site.time | date: "%s" %}
         {% assign event-date = event.date | date: "%s" %}
         {% if event-date > site-generation and event.date != "ongoing" %}
-          <a href="{{ event.event-name | datapage_url: '/events' }}">
+          <a href="/">
             <div class="row small collapse">
               <div class="event-date small-3 columns">
                 <h6>{{ event.date | date: "%a" }}</h6>
