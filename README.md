@@ -1,7 +1,7 @@
 #Content First Prototyping Sample Project
 The Content First Prototyping Framework is an open source toolkit that helps you bring real, dynamic content into your prototyping process. This repository is a sample project that demonstrates how the framework works.
 
-If this is the first page you’ve visited about content first prototyping, be sure to also check out the [Content First Prototyping Starter Kit](https://github.com/andybywire/content-first-prototyping) repository. If you’re looking for a bare bones version of the framework to clone as a staring point for your own project, check out the [cfp-framework](https://github.com/andybywire/cfp-framework) repository instead.
+If this is the first page you’ve visited about content first prototyping, be sure to also check out the [Smashing Magazine article](https://www.smashingmagazine.com/2016/05/content-first-prototyping/) that introduces the framework, or the [Content First Prototyping Starter Kit](https://github.com/andybywire/content-first-prototyping) repository. If you’re looking for a bare bones version of the framework to clone as a staring point for your own project, check out the [cfp-framework](https://github.com/andybywire/cfp-framework) repository instead.
 
 ##Green Lake Community Center 
 In order to get a better sense of what content first prototyping looks like in action, this repository stages a prototype build from start to finish, using digital content collection from a real-world situation. Here’s the scenario:
@@ -10,7 +10,7 @@ In order to get a better sense of what content first prototyping looks like in a
 
 Using a content first prototyping workflow, this project team created a functional mobile wireframe prototype that allows potential users navigate through and interact with actual GCC content:
 
-![PLACEHOLDER](/Users/andyfitzgerald/repos/cfp-example/img/gcc_screens.png)
+![gcc-screens](https://github.com/andybywire/cfp-example/blob/master/img/gcc_screens.png)
 
 To see the individual steps followed to build this prototype up from a clone of the [CFP Framework](https://github.com/andybywire/cfp-framework), check out this repository's [commit log](https://github.com/andybywire/cfp-example/commits/master). 
 
@@ -29,7 +29,7 @@ Once you’ve got your environment set up, install the project framework. (If yo
 
 2. Clone/copy the sample project to your machine (this will take a minute or so)
 
-        $ git clone https://github.com/andybywire/REPLACE.git
+        $ git clone https://github.com/andybywire/cfp-example.git
 
     **- or -**
 
