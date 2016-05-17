@@ -38,7 +38,7 @@ page_gen:
   - data: 'directory'
     name: 'last-name'
     template: 'page'
-  - data: 'feed'
+  - data: 'events'
     name: 'event-name'
     template: 'page'
     dir: 'events'
