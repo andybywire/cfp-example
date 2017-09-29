@@ -1,9 +1,9 @@
-#Content First Prototyping Sample Project
+# Content First Prototyping Sample Project
 The Content First Prototyping Framework is an open source toolkit that helps you bring real, dynamic content into your prototyping process. This repository is a sample project that demonstrates how the framework works.
 
 If this is the first page you’ve visited about content first prototyping, be sure to also check out the [Smashing Magazine article](https://www.smashingmagazine.com/2016/05/content-first-prototyping/) that introduces the framework, or the [Content First Prototyping Starter Kit](https://github.com/andybywire/content-first-prototyping) repository. If you’re looking for a bare bones version of the framework to clone as a staring point for your own project, check out the [cfp-framework](https://github.com/andybywire/cfp-framework) repository instead.
 
-##Green Lake Community Center 
+## Green Lake Community Center 
 In order to get a better sense of what content first prototyping looks like in action, this repository stages a prototype build from start to finish, using digital content collection from a real-world situation. Here’s the scenario:
 
 > The Green Lake Community Center offers classes, programs, and events to community members in the Green Lake neighborhood. Unfortunately, all of their current class, program, and event information is only available online via PDF, which in turn is only available from the Center’s fixed-width desktop-optimized site. In an effort to reach community members who are increasingly trying to access class, program, and event information via their mobile phones, the center has decided to launch a mobile-first programs website.
@@ -14,7 +14,7 @@ Using a content first prototyping workflow, this project team created a function
 
 To see the individual steps followed to build this prototype up from a clone of the [CFP Framework](https://github.com/andybywire/cfp-framework), check out this repository's [commit log](https://github.com/andybywire/cfp-example/commits/master). 
 
-##Using the Sample Files
+## Using the Sample Files
 In order to experiment and modify this sample project on your own computer, you'll need to install the framework dependencies. First, be sure you have:
 
 - [Command line tools](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/)
